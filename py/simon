@@ -1,0 +1,27 @@
+#!/usr/bin/env python3
+
+from random import randint
+import skilstak.colors as c
+
+print(c.clear +  c.cyan +'hello welcome to ' + c.red + 'S' + c.green + 'i' + c.cyan + 'm' + c.yellow + 'o' + c.red + 'n')
+
+def pick():
+    return randint(1,4)
+
+def pick_colored():
+    num = pick()
+    if pick == (1):
+        return (c.red + num)
+    elif pick == (2):
+        return (c.cyan + num) 
+    elif pick == (3):
+        return (c.yellow + num)
+    elif pick ==(4):
+        return (c.green + num)
+
+
+if __name__ == '__main__':
+    print(c.multi('Lets play') + c.x)
+    num = pick()
+    print(num)
+
