@@ -2,6 +2,9 @@
 
 from random import randint
 import skilstak.colors as c
+from time import sleep
+numbers = []
+
 
 print(c.clear +  c.cyan +'hello welcome to ' + c.red + 'S' + c.green + 'i' + c.cyan + 'm' + c.yellow + 'o' + c.red + 'n')
 
@@ -22,6 +25,23 @@ def pick_colored():
 
 if __name__ == '__main__':
     print(c.multi('Lets play') + c.x)
-    num = pick()
-    print(num)
+    print(c.yellow)
+    ready = input('(Press enter)')
+    while True:
+        new = pick()
+        numbers.append(new)
+        print(numbers)
+        sleep(0.5 * len(numbers))
+        print(c.clear)
+        order = input("Plz enter numbers > ")
+        print(order)
+        answer = []
+        for n in order:
+            answer.append(int(n))
+        if answer == numbers:
+            print('corret')
+        else:
+            print(c.red + 'you failed, DIE IN A HOLE')
+
+
 
